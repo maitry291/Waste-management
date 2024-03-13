@@ -7,6 +7,7 @@
     <file type="web" url="file://$PROJECT_DIR$/order-service" />
     <file type="web" url="file://$PROJECT_DIR$/shopping-service" />
     <file type="web" url="file://$PROJECT_DIR$/supplier-service" />
+    <file type="web" url="file://$PROJECT_DIR$/waste-conversion-service" />
     <file type="web" url="file://$USER_HOME$/Downloads/authentication-service" />
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="openjdk-21" project-jdk-type="JavaSDK">

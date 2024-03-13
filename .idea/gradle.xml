@@ -47,6 +47,14 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/waste-conversion-service" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/waste-conversion-service" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="externalProjectPath" value="$USER_HOME$/Downloads/authentication-service" />
         <option name="modules">
           <set>
