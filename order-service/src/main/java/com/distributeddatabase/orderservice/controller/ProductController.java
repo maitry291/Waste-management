@@ -75,7 +75,7 @@ public class ProductController {
         Inventory response = restTemplate.getForObject(getUrl, Inventory.class);
 
 
-
+        assert response != null;
         int totalQuantity =  response.getQuantity();
         int requiredQuantity = product.getQuantity();
 

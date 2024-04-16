@@ -2,8 +2,10 @@ package com.distritubuteddatabase.wasteconversionservice.controller;
 
 import com.distritubuteddatabase.wasteconversionservice.dto.ProductRequest;
 import com.distritubuteddatabase.wasteconversionservice.dto.ProductResponse;
+import com.distritubuteddatabase.wasteconversionservice.dto.WasteRequest;
 import com.distritubuteddatabase.wasteconversionservice.model.Inventory;
 import com.distritubuteddatabase.wasteconversionservice.model.Product;
+import com.distritubuteddatabase.wasteconversionservice.model.Waste;
 import com.distritubuteddatabase.wasteconversionservice.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -60,5 +62,41 @@ public class ProductController {
             System.err.println("Failed to create inventory.");
         }
     }
+/*
+    @PostMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
+    private void updateWasteStatus(WasteRequest wasteRequest)
+    {
+        Waste waste = Waste.builder()
+                .wasteId(wasteRequest.getWasteId())
+                .type(wasteRequest.getType())
+                .weight(wasteRequest.getWeight())
+                .supplierId(wasteRequest.getSupplierId())
+                .status(wasteRequest.getStatus())
+                .build();
+
+        String getUrl = "http://localhost:8084/api/waste/" + waste.getWasteId();
+        Waste response = restTemplate.getForObject(getUrl, Waste.class);
+
+        assert response != null;
+        response.setStatus(waste.getStatus());
+
+        String putUrl = "http://localhost:8081/api/waste/put";
+
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        HttpEntity<Object> requestEntity = new HttpEntity<>(response, headers);
+        ResponseEntity<Void> resp1 = restTemplate.exchange(
+                putUrl,
+                HttpMethod.PUT,
+                requestEntity,
+                Void.class);
+        if (resp1.getStatusCode() == HttpStatus.OK) {
+            System.out.println("Hurray Success");
+        } else {
+            System.out.println("Shit Error");
+        }
+    }*/
 
 }

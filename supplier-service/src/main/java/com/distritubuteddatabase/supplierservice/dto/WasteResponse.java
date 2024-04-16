@@ -10,8 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class WasteResponse {
-    private String id;
-
+    private String wasteId;
     private String type; // e.g., organic, plastic, paper
     private double weight; // weight of the waste item
     private String supplierId; // ID of the waste supplier

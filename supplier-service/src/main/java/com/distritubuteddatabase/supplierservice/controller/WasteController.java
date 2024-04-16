@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/waste")
@@ -28,10 +29,23 @@ public class WasteController {
         //createInventory(p1);
     }
 
+    @PostMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Waste updateInventoryItem(@RequestBody Waste waste)
+    {
+        return wasteService.updateWasteItem(waste);
+    }
+
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<WasteResponse> getAllProducts()
     {
         return wasteService.getAllProducts();
+    }
+
+    @GetMapping("/{id}")
+    public Optional<Waste> getWasteItem(@PathVariable String id)
+    {
+        return wasteService.getWasteItem(id);
     }
 }

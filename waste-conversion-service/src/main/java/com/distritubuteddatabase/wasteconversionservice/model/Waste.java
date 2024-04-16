@@ -1,4 +1,4 @@
-package com.distritubuteddatabase.supplierservice.model;
+package com.distritubuteddatabase.wasteconversionservice.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,7 +17,7 @@ public class Waste {
     private String wasteId;
 
     private String type; // e.g., organic, plastic, paper
-    private double weight; // weight of the waste item in kgs
+    private double weight; // weight of the waste item
     private String supplierId; // ID of the waste supplier
     private String status; // e.g., pending, processed
 }
